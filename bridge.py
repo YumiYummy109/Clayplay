@@ -100,7 +100,7 @@ async def bridge_loop():
 async def ble_loop():
     global client_ref
     while True:
-        log("🔍 扫描 SL278H ...")
+        log("🔍 扫描 SX176A ...")
         devs = await BleakScanner.discover(timeout=6.0)
         dev = next((d for d in devs if d.name and "SX176A" in d.name), None)
         if not dev:
