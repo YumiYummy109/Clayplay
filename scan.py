@@ -6,9 +6,9 @@ import asyncio
 from bleak import BleakScanner, BleakClient
 
 async def main():
-    print("🔍 扫描 SL278H ...")
+    print("🔍 扫描 SX176A ...")
     devs = await BleakScanner.discover(timeout=6.0)
-    dev = next((d for d in devs if d.name and "SL278" in d.name), None)
+    dev = next((d for d in devs if d.name and "SX176A" in d.name), None)
     if not dev:
         print("⚠️ 没找到设备"); return
     print(f"✅ 找到：{dev.name}  {dev.address}\n")
